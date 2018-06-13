@@ -1,0 +1,3 @@
+Privacy Policy
+
+This app is a school project for Code Fellows Code401JS, by Jennifer Piper. It uses Facebook's authentication to allow a user to log in to this app. This app may gather some personal information but I don't intend to do anything with it.
