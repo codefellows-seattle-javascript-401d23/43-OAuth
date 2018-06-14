@@ -26,7 +26,8 @@ Node.js, npm, dotenv, superagent, eslint, JavaScript
     
 
 ## Change Log
-05-02-2018  4:30pm  first commit, scaffolding tests not passing
+06-13-2016  scaffolding and lecture code
+06-13-2016  google working
 
 ## Credits and Collaborations
 Special thanks to all of the Code Fellows staff and fellow 401-d23 students.
