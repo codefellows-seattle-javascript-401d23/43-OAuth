@@ -1,24 +1,32 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 43: OAuth
-===
+# LAB 43 <PUT NAME HERE>
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-	* Include a screenshot of your backend's output and your oauth consent screen
-  * Submit a question, observation, and how long you spent on canvas 
-  
-## Learning Objectives  
-* Students will learn to implement OAuth 
+**Author**: Joshua Fredrickson
 
-## Requirements  
-#### backend
-* Create a backend route `GET /oauth/<3RD PARTY NAME>` for handling oauth 
+**Version**: 1.0.0 
 
-#### frontend 
-* Create an index.html with an anchor tag pointing to the google authorization page 
-* Configure the query string with correct key value pairs
+# Overview
 
-#### Documentation  
-Write a description of the project in your README.md, including detailed instructions for how to build your app.
+Lab 43 is a frontend and backed with a working example for utilizing Google's OAuth 2.0 
+functionality.
+
+
+# Getting Started
+
+To use the Lab 43 application, [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) 
+(Node Package manager) will need to be locally installed.  Once Node.js, npm, Mongo DB have been 
+installed, install the Lab 43 files.  Prior to starting the Lab 43 application, from the command 
+line while you are in the Lab 43 file folder, enter the command `npm i`.  This will download all 
+needed dependencies for the application to run.  
+Simply start the backend server and open the front-end index.html file within your web browser.
+
+# Architecture
+
+This application was deployed with the following technologies.
+Node.js, npm, dotenv, superagent, eslint, JavaScript
+    
+
+## Change Log
+05-02-2018  4:30pm  first commit, scaffolding tests not passing
+
+## Credits and Collaborations
+Special thanks to all of the Code Fellows staff and fellow 401-d23 students.
