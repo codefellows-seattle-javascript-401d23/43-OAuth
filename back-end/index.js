@@ -1,7 +1,8 @@
 'use strict';
 
-import express from 'express';
-import superagent from 'superagent';
+const express = require('express');
+const superagent = require('superagent');
+
 
 const app = express();
 
