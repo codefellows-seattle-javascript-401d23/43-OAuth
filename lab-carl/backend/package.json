@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "nodemon": "^1.17.5",
     "superagent": "^3.8.3"
   },
   "devDependencies": {

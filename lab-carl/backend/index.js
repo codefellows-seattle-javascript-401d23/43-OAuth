@@ -7,7 +7,13 @@ const app = express();
 require('dotenv').config();
 
 const GOOGLE_OAUTH_URL = 'https://www.googleapis.com/oauth2/v4/token';
+// const FACEBOOK_OAUTH_URL = `https://graph.facebook.com/v3.0/oauth/access_token?
+// client_id=${process.env.FACEBOOK_OAUTH_ID}
+// &redirect_uri=${process.env.API_URL}/login
+// &client_secret=${process.env.FACEBOOK_OAUTH_SECRET}
+// &code=`;
 const OPEN_ID_URL = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
+// const FACEBOOK_PROFILE_URL = 
 
 app.get('/oauth/google', (request, response) => {
   console.log('__STEP 3.1 - RECEIVING CODE__');
