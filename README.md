@@ -1,24 +1,38 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 43: OAuth
-===
+Lab 43: OAuth
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-	* Include a screenshot of your backend's output and your oauth consent screen
-  * Submit a question, observation, and how long you spent on canvas 
-  
-## Learning Objectives  
-* Students will learn to implement OAuth 
+## Overview 
 
-## Requirements  
-#### backend
-* Create a backend route `GET /oauth/<3RD PARTY NAME>` for handling oauth 
+This is basic OAuth setup with google. The frontend includes a link that when clicked promps google to initiate a GET request to our backend. 
 
-#### frontend 
-* Create an index.html with an anchor tag pointing to the google authorization page 
-* Configure the query string with correct key value pairs
+## Technology & Dependencies
 
-#### Documentation  
-Write a description of the project in your README.md, including detailed instructions for how to build your app.
+Javascript, Node
+
+#### Dependencies
+  - dotenv
+  - express
+  - nodemon
+  - superagent
+  - babel-eslint
+  - babel-preset-env
+  - babel-register
+  - eslint
+  - eslint-config-airbnb-base
+  - eslint-plugin-import
+
+
+## Getting Started
+
+Create a .env file in the backend that includes:
+
+```
+GOOGLE_OAUTH_ID=<user-id>
+GOOGLE_OAUTH_SECRET=<user-secret>
+CLIENT_URL=http://localhost:8080
+API_URL=http://localhost:3000
+PORT=3000
+```
+
+Run nodemon by entering ```nodemon``` in the terminal window.
+
+In a second terminal tab, enter ```live-server``` to open the frontend in the browser.
