@@ -1,24 +1,27 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 43: OAuth
-===
+# Spotify OAuth Route
+**Author**: Sarah Bixler
+**Version**: 1.0.0 
+## Overview
+Clicking the link in index.html enables a user to login into Spotify.  
+Once the user is logged in, spotify returns a code to `/oauth/spotify`
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-	* Include a screenshot of your backend's output and your oauth consent screen
-  * Submit a question, observation, and how long you spent on canvas 
-  
-## Learning Objectives  
-* Students will learn to implement OAuth 
+#### GET `/oauth/spotify`
+receives a code from Spotify and returns it to the `/api/token` route.  
 
-## Requirements  
-#### backend
-* Create a backend route `GET /oauth/<3RD PARTY NAME>` for handling oauth 
-
-#### frontend 
-* Create an index.html with an anchor tag pointing to the google authorization page 
-* Configure the query string with correct key value pairs
-
-#### Documentation  
-Write a description of the project in your README.md, including detailed instructions for how to build your app.
+## Getting Started
+- Fork the repo and run `npm i` to set up node modules
+- Create an `.env` file and configure it with the following enviroment variables 
+  ``` bash
+  PORT=3000
+  SPOTIFY_CLIENT_ID=<your client id>
+  SPOTIFY_CLIENT_SECRET=<your client secret>
+  CLIENT_URL=http://localhost:8080
+  API_URL=http://localhost:3000
+  ```
+-  in **index.html** replace `SPOTIFY_CLIENT_ID` in the query string with your own 
+- navigate to the front end folder and run live-server to serve the index page
+- navigate to the back end folder and use `npm run start` to start the server
+## Architecture
+This app uses Node.js, express, superagent, and eslint with the airbnb style rules 
+## Change Log
+06-17-2018-- app has a functioning GET route to log in to Spotify using using OAuth.  the server returns profile information and saves the spotify id as a cookie called SPOTIFY_ID
