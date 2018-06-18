@@ -1,24 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 43: OAuth
-===
+## lab 43
+This application is used as a demoonstration of how to connect and communicate with the Google using Google's OAuth. This application contains both a backend and frontend.  
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-	* Include a screenshot of your backend's output and your oauth consent screen
-  * Submit a question, observation, and how long you spent on canvas 
-  
-## Learning Objectives  
-* Students will learn to implement OAuth 
+## Install the following npm packages before using this application:
 
-## Requirements  
-#### backend
-* Create a backend route `GET /oauth/<3RD PARTY NAME>` for handling oauth 
+```npm i -D sass-loader node-sass css-loader style-loader html-webpack-plugin webpack webpack-cli webpack-dev-server webpack-merge babel-eslint babel-core babel-loader babel-preset-env babel-preset-react babel-preset-stage-0 react react-dom dotenv eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest eslint-plugin-react babel-plugin-transform-react-jsx-source file-loader superagent mini-css-extract-plugin react-router-dom prop-types react-test-renderer redux react-redux redux-devtools-extension redux-mock-store```
 
-#### frontend 
-* Create an index.html with an anchor tag pointing to the google authorization page 
-* Configure the query string with correct key value pairs
+## How to get things up and running
+You will need to run **Nodemon** and **mongodb** to display data from your backend.  You will need to run **npm run watch** to display your localhost:3000 frontend data. 
 
-#### Documentation  
-Write a description of the project in your README.md, including detailed instructions for how to build your app.

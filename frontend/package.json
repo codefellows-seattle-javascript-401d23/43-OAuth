@@ -1,0 +1,17 @@
+{
+  "name": "zachary-lab43",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "watch": "webpack-dev-server --config webpack.dev.js",
+        
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "watch": "^1.0.2"
+  }
+}
