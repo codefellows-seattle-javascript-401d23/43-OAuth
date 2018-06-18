@@ -7,10 +7,10 @@ const app = express();
 
 require('dotenv').config();
 
-const FACEBOOK_OAUTH_URL = '';
-const FACEBOOK_LOGIN_URL = '';
+const GOOGLE_OAUTH_URL = 'https://www.googleapis.com/oauth2/v4/token';
+const OPEN_ID_URL = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
 
-app.get('/oauth/facebook', (request, response) => {
+app.get('/oauth/google', (request, response) => {
   console.log('__STEP 3.1 - RECEIVING THE CODE__');
   if (!request.query.code) {
     response.redirect(process.env.CLIENT_URL);
@@ -18,14 +18,14 @@ app.get('/oauth/facebook', (request, response) => {
     console.log('__CODE__', request.query.code);
 
     console.log('__STEP 3.2 - SENDING THE CODE BACK__');
-    return superagent.post(FACEBOOK_OAUTH_URL)
+    return superagent.post(GOOGLE_OAUTH_URL)
       .type('form')
       .send({
         code: request.query.code,
         grant_type: 'authorization_code',
-        client_id: process.env.FACEBOOK_AUTH_ID,
-        client_secret: process.env.FACEBOOK_OAUTH_SECRET,
-        redirect_uri: `${process.env.API_URL}/oauth/facebook?state=aabbcc112233`,
+        client_id: process.env.GOOGLE_AUTH_ID,
+        client_secret: process.env.GOOGLE_OAUTH_SECRET,
+        redirect_uri: `${process.env.API_URL}/oauth/google`,
       })
       .then((tokenResponse) => {
         console.log('__STEP 3.3 - ACCESS TOKEN__');
@@ -35,12 +35,12 @@ app.get('/oauth/facebook', (request, response) => {
         }
         const accessToken = tokenResponse.body.acces_token;
 
-        return superagent.get(FACEBOOK_LOGIN_URL)
+        return superagent.get(OPEN_ID_URL)
           .set('Authorization', `Bearer ${accessToken}`);
       })
-      .then((facebookLoginResponse) => {
+      .then((openIDResponse) => {
         console.log('__STEP 4 - OPEN ID__');
-        console.log(facebookLoginResponse.body);
+        console.log(openIDResponse.body);
 
 
         response.cookie('LAB_43_TOKEN', 'Hello, I am the Lab 43 token.');
