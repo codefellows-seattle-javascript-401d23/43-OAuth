@@ -10,7 +10,7 @@ receives a code from Spotify and returns it to Spotify's `/api/token` route.
 
 ## Getting Started
 - Fork the repo and run `npm i` to set up node modules
-- Create an `.env` file and configure it with the following enviroment variables 
+- Create an `.env` file and configure it with the following environment variables 
   ``` bash
   PORT=3000
   SPOTIFY_CLIENT_ID=<your client id>
