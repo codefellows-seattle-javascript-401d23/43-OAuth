@@ -6,7 +6,7 @@ Clicking the link in index.html enables a user to login into Spotify.
 Once the user is logged in, spotify returns a code to `/oauth/spotify`
 
 #### GET `/oauth/spotify`
-receives a code from Spotify and returns it to the `/api/token` route.  
+receives a code from Spotify and returns it to Spotify's `/api/token` route.  
 
 ## Getting Started
 - Fork the repo and run `npm i` to set up node modules
